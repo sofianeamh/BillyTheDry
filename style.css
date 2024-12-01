@@ -1,0 +1,259 @@
+@charset "utf-8";
+
+/* Reset de base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      text-align: center;
+      padding: 0 20px; /* Ajout de padding \'e0 gauche et \'e0 droite */
+    }
+
+    .content {
+      flex-grow: 1;
+      width: 100%;
+      max-width: 800px;
+      padding: 20px;
+    }
+
+    /* Image de profil */
+    .profile-image {
+      width: 100%;
+      height: 700px ;
+      border-radius: 10px;
+      background: url(IMG/LOGO-removebg-preview.png) no-repeat center center;
+      background-size: cover;
+      margin: 20px auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Barre de navigation */
+    .navbar {
+            width: 100%;
+            max-width: 800px;
+            background: #33daff;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 15px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+           
+        }
+    .navbar:hover {
+      background-color: #fff ;
+      color: #33daff;
+    }
+
+    /* Grille de liens sociaux */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 800px;
+      margin-top: 50px;
+    }
+
+    .grid a {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+      border-radius: 15px;
+      font-size: 1.1em;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .grid a img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .grid a:hover {
+      background-color: #33daff;
+      color: #121212;
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .grid a:hover img {
+      transform: scale(1.1);
+      filter: brightness(120%);
+
+    }
+
+    /* Grille de liens de secours */
+.grid-secours {
+  display: grid;
+  grid-template-columns: 1fr ; /* Deux colonnes */
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 30px; /* Espacement en haut */
+}
+
+.grid-secours a {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 15px;
+  font-size: 1em;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;      /* Centre verticalement le texte et l'image */
+  justify-content: center;
+  gap: 10px;              /* Ajoute un espace entre l'image et le texte */
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.grid-secours a img {
+  width: 15px;
+  height: 15px;
+  margin: 0;              /* Supprime le margin-bottom pour un alignement parfait */
+  transition: transform 0.3s ease;
+}
+
+.grid-secours a:hover {
+  background-color: #33daff;
+  color: #121212;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
+}
+
+.grid-secours a:hover img {
+  transform: scale(1.1);
+  filter: brightness(120%);
+}
+
+  
+    .CTA {
+
+      margin-top: 20px;
+      font-style: italic;
+      
+    
+     
+    }
+    /* Section FAQ */
+    .faq-section {
+      width: 100%;
+      max-width: 800px;
+      margin-top: 50px;
+     }
+  
+    .faq-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #000;
+      background: #33daff;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 15px;
+
+    }
+  
+    /* Style des items FAQ */
+    .faq-item {
+      border-radius: 15px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+
+    .faq-item:hover {
+      background-color: #33daff;
+    }
+
+    .faq-item h3 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      font-size: 1.2em;
+      background: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      margin: 0;
+
+      /* Pour \'e9viter que le texte ne se coupe et reste sur une ligne */
+      white-space: nowrap;
+      overflow: hidden; /* Masque le texte qui d\'e9passe */
+      text-overflow: ellipsis; /* Ajoute des points de suspension si n\'e9cessaire */
+    }
+
+    /* Ic\'f4ne de d\'e9ploiement */
+    .faq-item h3::after {
+      content: '';
+      font-size: 1em;
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active h3::after {
+      transform: rotate(-180deg); /* Tourne l'ic\'f4ne vers le haut quand l'\'e9l\'e9ment est actif */\
+    }
+
+    .faq-content {
+      display: none;
+      padding: 15px;
+      background-color: #fff;
+      font-size: 1em;
+      color: #000;
+      transition: max-height 0.5s ease;
+      max-height: 0;
+      overflow: hidden;
+    }
+
+    .faq-item.active .faq-content {
+      display: block;
+      max-height: 500px; /* Max-height pour l'animation */
+    }
+
+    /* Pied de page */
+    .footer {
+      font-size: 1em;
+      color: #cccccc;
+      padding: 20px 0;
+      background-color: #121212;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+    }
+}
